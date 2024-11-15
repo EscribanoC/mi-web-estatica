@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(205, 255, 238);
+}
+
+header{
+    width: 100%;
+    padding: 20px;
+    background-color: aquamarine;
+    justify-content: center;
+}
