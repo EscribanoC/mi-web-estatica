@@ -1,0 +1,288 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: azure;
+}
+
+header {
+  background-color: rgb(107, 197, 197);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.388);
+
+  & .containerCabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+
+    & img {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+    }
+
+    & .containerBuscadorEInicio {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      & input {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+      }
+    }
+  }
+  & .containerNavegacion {
+    background-color: rgb(69, 163, 163);
+    width: 100%;
+    padding: 15px;
+    & ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      & a {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    .menuHamburguesa{
+      display: none;
+    }
+    #checkboxHamburguesa{
+      display: none;
+    }
+  }
+}
+
+
+
+
+main {
+  display: flex;
+  flex-direction: row;
+  & aside {
+    background-color: rgb(177, 223, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 350px;
+    & img {
+      width: 100%;
+      height: 50%;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+    .noticia {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background-color: rgb(131, 193, 193);
+      padding: 20px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+  }
+  & article {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 30px;
+    & .containerArticulos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      width: 80%;
+      gap: 30px;
+      & .producto {
+        background-color: rgb(177, 223, 223);
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.35);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        & .imagenProducto {
+          width: 130px;
+          height: 130px;
+          overflow: hidden;
+          border: 2px solid rgb(107, 192, 192);
+          position: relative;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+          & img {
+            float: left;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+          }
+
+          & .filtroImagen {
+            background-color: rgba(0, 165, 157, 0);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .imagenProducto:hover .filtroImagen {
+          background-color: rgba(0, 165, 157, 0.609);
+        }
+
+        & ul {
+          list-style: none;
+        }
+      }
+    }
+  }
+  & .containerBotonesPagina {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    & input{
+        padding: 10px;
+    }
+  }
+}
+
+footer{
+    background-color: rgba(5, 120, 114, 0.609);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 40px;
+
+    & .contactoFooter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .enlacesFooter{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        & div{
+          flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            & ul {
+                list-style: none;
+            }
+        }
+    }
+}
+
+svg{
+  width: 30px;
+}
+
+@media (max-width: 800px){
+header{
+  & .containerNavegacion{
+    & ul{
+      display: none;
+    }
+
+    & .menuHamburguesa{
+      display: block;
+      padding: 5px;
+    }
+  }
+
+  & .containerNavegacion:has(#checkboxHamburguesa:checked){
+    & ul{
+      display: flex !important;
+      flex-direction: column;
+    }
+    
+
+    & label{
+      content: "<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 384 512'><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>"
+    }
+  }
+}
+
+
+    main{
+      display: flex ;
+      flex-direction: column;
+      align-items: center;
+      & aside{
+        & img{
+          width: 50% !important;
+        }
+      }
+    }
+
+    aside{
+      display: flex !important;
+      width: 100% !important;
+      & .noticia{
+        width: 100% !important;
+      }
+    }
+
+    .containerArticulos{
+        display: flex !important;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    footer{
+      flex-direction: column;
+      align-items: center;
+
+      & .enlacesFooter{
+        flex-direction: column;
+      }
+    }
+}
